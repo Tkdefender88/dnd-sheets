@@ -1,4 +1,4 @@
-public  class Application : Gtk.Application {
+public class Application : Gtk.Application {
 	public Application () {
 		Object(
 			application_id: "com.github.Tkdefender88.dnd-sheets",
@@ -7,7 +7,7 @@ public  class Application : Gtk.Application {
 	}
 
 	protected override void activate () {
-		var window = new DNDSheets.Window(this);
+		var window = new Sheets.Window(this);
 
         add_window(window);
 	}

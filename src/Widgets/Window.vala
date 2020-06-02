@@ -1,6 +1,9 @@
-namespace DNDSheets {
+namespace Sheets {
     public class Window : Gtk.ApplicationWindow {
         private GLib.Settings settings;
+
+        public Gtk.Stack stack {get; set;}
+
         public Window(Application app) {
             Object (
                 application: app
@@ -8,7 +11,6 @@ namespace DNDSheets {
         }
 
         construct {
-            title = "DND Sheets";
             window_position = Gtk.WindowPosition.CENTER;
             set_default_size(350, 200);
 
@@ -19,6 +21,23 @@ namespace DNDSheets {
             delete_event.connect( (e) => {
                 return before_destroy();
             });
+
+            stack = new Gtk.Stack();
+            stack.expand = true;
+
+            var headerbar = new Sheets.HeaderBar(this);
+            set_titlebar(headerbar);
+
+            var stats = new Gtk.Grid();
+            var spells = new Gtk.Grid();
+            var backstory = new Gtk.Grid();
+
+            add(stack);
+
+            stack.add_titled(stats, "stats", "stats");
+            stack.add_titled(backstory, "backstory", "backstory");
+            stack.add_titled(spells, "spells", "spells");
+
 
             show_all();
         }

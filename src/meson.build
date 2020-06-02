@@ -1,7 +1,8 @@
 sources = files(
     'main.vala',
     'App.vala',
-    'Widgets/Window.vala'
+    'Widgets/Window.vala',
+    'Widgets/HeaderBar.vala'
 )
 
 dependencies = [
