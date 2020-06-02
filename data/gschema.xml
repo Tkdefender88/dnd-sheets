@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema path="/com/github/Tkdefender88/dnd-sheets/" id="com.github.Tkdefender88.dnd-sheets">
+        <key name="pos-x" type="i">
+            <default>360</default>
+            <summary>Horizontal Position</summary>
+            <description>The saved horizontal position of the window</description>
+        </key>
+        <key name="pos-y" type="i">
+            <default>360</default>
+            <summary>Vertical Position</summary>
+            <description>The saved vertical position of the window</description>
+        </key>
+        <key name="width" type="i">
+            <default>600</default>
+            <summary>Window Width</summary>
+            <description>The saved Width of the window</description>
+        </key>
+        <key name="height" type="i">
+            <default>400</default>
+            <summary>Window Height</summary>
+            <description>The saved height of the window</description>
+        </key>
+    </schema>
+</schemalist>
